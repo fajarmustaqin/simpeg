@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+.container{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form .stage .field button{
+    width: 20%;
+    height: calc(100% + 5px);
+    border: none;
+    background: #4169E1;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: -20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 50;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+.stage .btns button{
+    margin-top: -20px!important;
+}
+
+.stage .field button:hover{
+    background: rgb(1, 108, 2);
+}
+
+.stage .btns button.prev-1{
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.btns button.next-1{
+    margin-right: 3px;
+}
+
+
+.bar{
+    display: flex;
+    margin-top: 30px;
+}
+
+.bar .progres-bar-item{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bar .progres-bar-item .icon{
+    font-size: 35px;
+    color: #4169E1;
+    margin: 0 40px;
+}
+.bar .progres-bar-item .txt{
+    font-size: 12px;
+    font-weight: 600;
+    color: #4169E1;
+}
+.bar .progres-bar-item .progres-step{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(68, 68, 68, 0.781);
+    margin: 12px 0;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+.progres-step::after{
+    content: "";
+    position: absolute;
+    width: 85px;
+    height: 5px;
+    background-color: rgba(68, 68,68 ,0.781);
+    right: 30px;
+}
+
+.one::after{
+    width: 0;
+    height: 0;
+}
+
+.bar .progres-bar-item .progres-step .uil{
+    display: none;
+}
+.bar .progres-bar-item .poin{
+    font-size: 16px;
+}
+
+.bar .progres-bar-item .active{
+    background-color: #4169E1;
+    display: grid;
+    place-items: center;
+}
+.progres-bar-item .active::after{
+    background-color: #4169E1;
+}
+.bar .progres-bar-item .active .poin{
+    display: none;
+}
+.bar .progres-bar-item .active .uil{
+    font-size: 20px;
+    display: flex;
+}
+
+/* responsive bar */
+@media (max-width: 980px){
+    .bar{
+        flex-direction: column;
+    }
+    .bar .progres-bar-item{
+        flex-direction: row;
+    }
+    .bar .progres-bar-item .progres-step{
+        margin: 0 30px;
+    }
+    .progres-step::after{
+        width: 5px;
+        height: 55px;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    .one::after{
+        height: 0;
+    }
+    .bar .progres-bar-item .icon{
+        margin: 15px 0;
+    }
+}
+
+.stage{
+    margin-top: 50px;
+    display: none;
+}
+.stage-active{
+    display:block;
+}
+.stage .judul{
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: 10px;
+    padding-bottom: 30px;
+    color: #5543ca;
+}
+
+/* form step progress */
+/* .form-step{
+    display: none;
+}
+
+.form-step .step-actived{
+    display: block;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container{
+    background: #fff;
+    width: 700px;
+    padding: 50px;
+    text-align: center;
+}
+
+.container .progres-bar-step{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.container .progres-bar-step div{
+    height: 50px;
+    width: 50px;
+    background: #f0f2f7;
+    border: 2px solid #7a90fd;
+    border-radius: 50%;
+    padding: 15px;
+    font-weight: bold;
+    color: #ccc;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.progres-bar-step div:hover{
+    background: #7a90fd;
+    color: #fff;
+}
+.progres-bar-step div:active{
+    background: #7a90fd;
+    color: #fff;
+}
+.progres-bar-step div::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    height: 2px;
+    width: 50px;
+    background: #ccc;
+}
+.progres-bar-step div:last-child::before{
+    display: none;
+}
+
+@media (max-width: 800px){
+    .container{
+        width: auto;
+        margin: 50px;
+    }
+    .progres-bar-step div::before{
+        width: 150px;
+    }
+}
+
+@media (max-width: 700px){
+    .progres-bar-step div::before{
+        width: 100px;
+    }
+} */
